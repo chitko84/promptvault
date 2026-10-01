@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (toggled on <html> by the app) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Rich, slightly blue-tinted dark surfaces — not a plain color inversion */
+@theme {
+  --color-night-950: #07080c;
+  --color-night-900: #0d0f16;
+  --color-night-800: #151824;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: rgb(99 102 241 / 0.25);
+}
